@@ -1,0 +1,21 @@
+// Z-index values
+$base: 0;
+$above: 1; // use this for all values above the base
+$below: -1; // and this for all values below the base
+
+// Page Layout
+$zLayoutNavigation: $above + $base;
+$zLayoutFooter: $above + $base;
+$zLayoutModal: $above + $zLayoutNavigation;
+$zLayoutPopUpAd: $above + $zLayoutModal;
+
+// NavMenu
+$zNavMenuBackdrop: $below + $base;
+$zNavMenuPopover: $above + $base;
+$zNavMenuToggle: $above + $zNavMenuPopover;
+
+// Usage ---
+
+.nav {
+  z-index: $zLayoutNavigation;
+}

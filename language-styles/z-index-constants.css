@@ -1,0 +1,23 @@
+:root {
+  /* Z-index values */
+  --base: 0;
+  --above: 1; /* use this for all values above the base */
+  --below: -1; /* and this for all values below the base */
+
+  /* Page Layout */
+  --zLayoutNavigation: calc(var(--above) + var(--base));
+  --zLayoutFooter: calc(var(--above) + var(--base));
+  --zLayoutModal: calc(var(--above) + var(--zLayoutNavigation));
+  --zLayoutPopUpAd: calc(var(--above) + var(--zLayoutModal));
+
+  /* NavMenu */
+  --zNavMenuBackdrop: calc(var(--below) + var(--base));
+  --zNavMenuPopover: calc(var(--above) + var(--base));
+  --zNavMenuToggle: calc(var(--above) + var(--zNavMenuPopover));
+}
+
+/* Usage --- */
+
+.nav {
+  z-index: var(--zLayoutNavigation);
+}
